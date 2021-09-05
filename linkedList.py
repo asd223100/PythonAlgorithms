@@ -52,3 +52,34 @@ class LinkedList:
         while ptr:
             print(ptr.data)
             ptr = ptr.next
+
+
+class DoubleLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+
+    def add(self, new_node):
+        if isinstance(new_node, Node):
+            if self.head is None:
+                self.head = new_node
+                new_node.previous = None
+                new_node.next = None
+                self.tail = new_node
+            else:
+                self.tail.next = new_node
+                new_node.previous = self.tail
+                self.tail = new_node
+        return
+
+    def print_from_head(self):
+        ptr = self.head
+        while ptr:
+            print(ptr.data)
+            ptr = ptr.next
+
+    def print_from_tail(self):
+        ptr = self.tail
+        while ptr:
+            print(ptr.data)
+            ptr = ptr.previous
