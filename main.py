@@ -10,4 +10,3 @@ if __name__ == '__main__':
     link.beginning(10)
     link.print_list()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
